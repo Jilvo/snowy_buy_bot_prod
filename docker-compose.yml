@@ -2,7 +2,7 @@ version: '3'
 services:
   app_main:
     # build: .
-    image: jilvo/snowy-buy-bot:1.2.0
+    image: jilvo/snowy-buy-bot:1.2.2
     command: ["python", "bot_telegram/main.py"]
     ports:
       - "4000:80"
@@ -11,7 +11,7 @@ services:
 
   app_send_message:
     # build: .
-    image: jilvo/snowy-buy-bot:1.2.0
+    image: jilvo/snowy-buy-bot:1.2.2
     command: ["python", "bot_telegram/main_send_message.py"]
     ports:
       - "4001:80"
@@ -19,13 +19,13 @@ services:
       - ./medias:/app/medias
   app_trending:
     # build: .
-    image: jilvo/snowy-buy-bot:1.2.0
+    image: jilvo/snowy-buy-bot:1.2.2
     command: ["python", "bot_telegram/main_trending.py"]
     ports:
       - "4002:80"
 
   app_subscription:
-    image: jilvo/snowy-buy-bot:1.2.0
+    image: jilvo/snowy-buy-bot:1.2.2
     command: ["python", "bot_telegram/main_subscription.py"]
     ports:
       - "4003:80"
